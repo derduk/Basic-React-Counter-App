@@ -1,0 +1,206 @@
+.welcomeMessage { 
+  text-align: center;
+  margin: 25vh;
+}
+
+.welcomeMessage p {
+  font-family: "Tiny5";
+  font-size: 5rem;
+  text-align: center;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgb(103, 23, 23);
+  width: 0;
+  animation: typing 3s steps(30, end) infinite, blink 0.5s step-end infinite alternate;
+  color: black;
+}
+
+.setButton button:disabled {
+  cursor: not-allowed;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.startApp button {
+  padding: 25px;
+  margin-top: 7rem;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: tomato;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startApp button:active {
+  background-color: rgb(241, 149, 149);
+}
+
+.close img {
+  cursor: pointer;
+  position: relative;
+  left: 34rem;
+  top: -1rem;
+}
+
+main {
+  box-shadow: 10px 2px 20px 3px gainsboro;
+  width: 40rem;
+  padding: 2rem;
+  margin: auto;
+  margin-top: 6rem;
+  height: 70vh;
+}
+
+.displayBox {
+  border: 1px solid gainsboro;
+  border-radius: 2rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 20vh;
+  margin: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.displayBox:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.displayBox.animate {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+.progressContainer {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.setButton button {
+  width: 10rem;
+  height: 3.5rem;
+  border: none;
+  margin-top: 2.5rem;
+  cursor: pointer;
+}
+
+.decrease button {
+  background-color: red;
+}
+
+.reset button {
+  background-color: goldenrod;
+}
+
+.increase button {
+  background-color: green;
+}
+
+.setButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button img {
+  width: 50px;
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+  .welcomeMessage {
+    margin: 20vh;
+  }
+  .welcomeMessage p {
+    font-size: 3.5rem;
+    padding: 20px;
+  }
+  .startApp button {
+    padding: 20px;
+    font-size: 1.3rem;
+    margin-top: 3rem;
+  }
+}
+
+.progressContainer {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #4caf50; /* Green color for progress */
+  width: 0%; /* Starting width of 0% */
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+
+/* Medium Screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .welcomeMessage {
+    margin: 15vh;
+  }
+  .welcomeMessage p {
+    font-size: 2.4rem;
+    padding: 10px;
+  }
+  .startApp button {
+    padding: 18px;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+  }
+}
+
+/* Small Screens */
+@media (max-width: 767px) {
+  .welcomeMessage {
+    margin: 10vh;
+  }
+  .welcomeMessage p {
+    font-size: 1.39rem;
+    padding: 8px;
+    border-right: 1px solid rgb(255, 255, 255);
+  }
+  .startApp button {
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 4rem;
+  }
+}
